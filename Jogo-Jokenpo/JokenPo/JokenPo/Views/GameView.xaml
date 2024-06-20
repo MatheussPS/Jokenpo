@@ -71,10 +71,11 @@
                 FontSize="25"
                 FontAttributes="Bold"/>
 
-        <Picker Title="Selecione sua jogada"
-                    SelectedIndex="{Binding Escolha_Player1, Mode=TwoWay}"
+        <Picker 
+            Title="Selecione sua jogada"
+                    SelectedItem="{Binding Escolha_Player1}"
                     WidthRequest="300"
-                    BackgroundColor="Gray">
+                  >
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Pedra</x:String>
@@ -84,8 +85,9 @@
             </Picker.ItemsSource>
         </Picker>
 
-        <ImageButton
-                Source="jogar_btn.png"
+        <Button
+                BackgroundColor="Aquamarine"
+                Text ="Jogar! "
                 Command="{Binding JogarCommand}"
                 SemanticProperties.Hint="Realiza a jogada"
                 HorizontalOptions="Fill"
