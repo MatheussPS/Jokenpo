@@ -1,0 +1,64 @@
+Pré-Avaliação:
+
+Escrita:
+Para que serve o MVVM?
+
+- O MVVM serve para padronizar o projeto, de forma que fique mais limpo, ele separa a parte do layout e o código por tras da aplicação. Além disso, facilita a manutenção dos códigos;
+
+O que é o MVVM Community Toolkit?
+
+-É uma ferramenta da comunidade que facilita o desenvolvimento de um projto por meio da padronizção MVVM;
+
+Para quê serve o arquivo appShell? Como adicionar uma view para ser exibida no lugar da main page?
+
+- Indica a rota que um ou vários arquivo será aberto;
+
+Para que serve <TabBar> no appshell?
+
+- Indica a rota para que outro arquivo seja aberto, é uma forma de organizar a navegação do usuário por meio de abas;
+
+Em aula, como instalamos pacotes usando Nuget no C#?
+
+- Devemos clicar com o "botão direito" na solução, após isso, devemos ir em Manage NuGet Packages e selecionar browse para enfim escolher o pacote que deseja baixar;
+
+O que é o Binding? Em que arquivo criamos os bindings?
+
+- Binding é a uma técnica para o relacionamento de propriedades de objetos distintos para atualizações automáticas. Criamos os bindings nos arquivos da pasta Views;
+
+O que é um Command?
+
+- É um 
+
+O que é o Binding context? Escreva como associamos o binding context a classe ViewModel
+
+- O Binding Context é onde estarão localizadas as suas bindings. Associamos o binding context as propriedades especificas no ViewModel;
+
+Para que serve a ViewModel?
+
+-É a intersecção entre o View e o Model, mantém os dados e a lógica da aplicação para facilitar a manutenção do código em projetos MVVM;
+
+Qual a diferença entre construir uma view no MVVM e fora do MVVM?
+
+- Desorganização do código por conta da falta de padronização, já que a lógica implementada no View será feita nele próprio, não em classes(Models). Desobedece os conceitos de orientação à objeto;
+
+O que quer dizer que um atributo é uma propriedade observável? [Observable Propriety]?
+
+- É uma propriedade que notifica automaticamente as alterações aos observadores;
+
+Quando criamos uma observable Property, que cuidado devemos ter com os atributos?
+
+-Atributos privados, sem getters e setters, além do nome dos atributos com inicial minúscula;
+
+
+Prática:
+Crie uma classe que modele um usuário de umjogo de JoKenPo
+
+Desenhe uma interface que possibilita o usuário jogar Jo Ken Po contra o aplicativo
+
+Crie um método que permita que o usuário selecione Pedra, Papel ou Tesoura. Depois,faça um método que sorteie uma das opções parao oponente e as compare.
+
+Se o usuário ganhar, aumente 1 ponto em sua pontuação
+
+Quando ou usuário ou oponente chegar a 10 pontos, mostre na tela "_________ venceu"
+
+O aplicativo deve mostrar uma imagem que represente Pedra,Papel ou Tesoura para cada opção ou seleção feita pelo oponente.

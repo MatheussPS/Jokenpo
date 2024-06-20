@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JokenPo.Views.GameView"
+             Title="GameView">
+    <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+        <HorizontalStackLayout Spacing="100"
+                                   Margin="0,170,0,0"
+                                   VerticalOptions="Center">
+            <VerticalStackLayout Spacing="5">
+
+                <Label
+                        Text="{Binding Nome_Player1}"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"/>
+
+                <Image
+                        Source="{Binding Imagem_Player1}"
+                        HeightRequest="185"
+                        Aspect="AspectFit"
+                        SemanticProperties.Description="Imagem do Player"/>
+
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout Spacing="15">
+                <Label
+                        Text="{Binding Pontuacao_Player1}"
+                        FontSize="40"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"/>
+
+                <Label
+                        Text="X"
+                        FontSize="20"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"/>
+
+                <Label
+                        Text="{Binding Pontuacao_Player2}"
+                        FontSize="40"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"/>
+
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+
+                <Label
+                        Text="{Binding Nome_Player2}"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"/>
+
+                <Image
+                        Source="{Binding Imagem_Player2}"
+                        HeightRequest="185"
+                        Aspect="AspectFit"
+                        SemanticProperties.Description="Imagem do Oponente"/>
+
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+
+        <Label
+                Margin="0,50,0,0"
+                Text="{Binding Resultado}"
+                HorizontalOptions="Center"
+                FontSize="25"
+                FontAttributes="Bold"/>
+
+        <Picker Title="Selecione sua jogada"
+                    SelectedIndex="{Binding Escolha_Player1, Mode=TwoWay}"
+                    WidthRequest="300"
+                    BackgroundColor="Gray">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Pedra</x:String>
+                    <x:String>Papel</x:String>
+                    <x:String>Tesoura</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <ImageButton
+                Source="jogar_btn.png"
+                Command="{Binding JogarCommand}"
+                SemanticProperties.Hint="Realiza a jogada"
+                HorizontalOptions="Fill"
+                WidthRequest="300"/>
+
+    </VerticalStackLayout>
+</ContentPage>
